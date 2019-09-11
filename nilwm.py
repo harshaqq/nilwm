@@ -63,7 +63,25 @@ class wm(object):
         event.window.map()
 
     def key(self, event):
-        pass
+        if event.detail in self.t:
+            self.run(preferences.applicationDefaults.terminal)
+        if event.detail in self.x:
+            self.destroy(event)
+        else:
+            log('Unhandled key event')
+
+    def run(self, applicationInfo):
+        try:
+            name = applicationInfo['name']
+            command = applicationInfo['command']
+        except:
+            raise ValueError
+        try:
+            log('Running ' + name)
+            subprocess.Popen(command)
+        except BaseException as e:
+            log('Failed to launch :' + command)
+            log(str(e))
 
     def close(self):
         self.display.close()

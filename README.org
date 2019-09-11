@@ -1,9 +1,10 @@
 Nil window manager
-
 * Requirements
 
 * Installation and configuration
 
+** Install dependencies
+   `pip install -r requirements.txt`
 * Tips/tricks
 
 * Reporting issues/bugs
