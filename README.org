@@ -1,0 +1,11 @@
+Nil window manager
+
+* Requirements
+
+* Installation and configuration
+
+* Tips/tricks
+
+* Reporting issues/bugs
+
+* Contributing
